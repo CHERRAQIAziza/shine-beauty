@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="shine.js"></script>
+        <title>App Media Query</title>
+    </head>
+    <body>
+    <div class="navg">
+      <nav><div><a><img class="logo" src="images/LOGO.png" alt="LOGOO" ></a>
+        
+    
+    </div>
+    <a class="menu-toggle"><img src="images/menu.png" alt="menu icon" class="menu-icon"></a>
+
+            <ul id="menu">
+                <li> <a href="#">Accueil </a></li>
+                <li> <a href="#cntact">Contact </a></li>
+                <li> <a href="#prd">Produits </a></li>
+            </ul>
+        </nav>
+    </div>
+        <div class="container">
+            <div class="motv">Découvrez votre beauté authentique avec nos produits cosmétiques de luxe 
+                parce que vous méritez ce qu'il y a de meilleur !<br>
+                <button class="btnNosProd" onclick="location.href='#prd'">Découvrez nos produits </button>
+            </div>
+                
+            <img class="beauty" src="images/Beauty.png" alt="LOGOO" >
+            
+        </div>
+    <body>
+        <div class="content">
+
+            <div class="products" id="prd">
+                <div class="product-item">
+                    <img src="images/ROUGE DIOR.jpg" alt="Produit 2">
+                    <div class="product-text">
+                        <h4>Rouge Dior</h4>
+                         <button onclick="afficheDesc()" class="btnDesc">Description</button>
+                            <div id="Description">Ce rouge à lèvres brillant et hydratant est formulé à 90 % d'ingrédients d'origine naturelle. Sa texture fondante offre une couleur intense, un effet vinyle et 24 heures d'hydratation grâce à des ingrédients comme la cire florale de jasmin et des huiles végétales. Le produit est aussi rechargeable, s'inscrivant dans une démarche écologique</div>
+                        <button onclick="affichIng()" class="btnIng">Ingrédients</button>
+                        <div id="Ingrédients"> Cire de jasmin : hydrate les lèvres et apporte confort à l'application.
+                            Huile de prune : riche en acides gras essentiels et omégas, elle nourrit et protège les lèvres jusqu'à 24 heures.
+                            Extrait de pivoine rouge : présent dans la gamme Rouge Dior Forever, il aide à préserver l'hydratation naturelle des lèvres.
+                            Huiles végétales : contribuent à une dispersion uniforme des pigments pour une couleur intense et brillante.</div><br>
+                        
+                        <label id="prix1">400</label><br>
+                        <button class="btnAcheter" onclick="acheter('cmd');selectionnerBouton(1)">Acheter</button>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="images/Palette.jpg" alt="Produit 2">
+                    <div class="product-text">
+                        <h4>Palette patrick ta</h4>
+                         <button onclick="afficheDesc2()" class="btnDesc">Description</button>
+                            <div id="Description2">Les palettes de fards à paupières Patrick Ta, comme la Major Dimension et la Major Dimension II Rose, sont réputées pour leur qualité professionnelle et leur variété de textures. Elles offrent des combinaisons de teintes neutres et rosées, avec une sélection de finitions mates, satinées et métalliques. Ces palettes contiennent aussi des bases crémeuses qui permettent d'intensifier les couleurs et de prolonger la tenue des ombres à paupières</div>
+                        <button onclick="affichIng2()" class="btnIng">Ingrédients</button>
+                        <div id="Ingrédients2"> Mica et Synthetic Fluorphlogopite : donnent de la brillance et une texture soyeuse
+                            Beurre de karité (Butyrospermum Parkii Butter) : hydrate et adoucit les paupières
+                            Tricrésylate de glycérol (Glyceryl Triacetyl Ricinoleate) et triglycérides capryliques/capriques : assurent une bonne tenue et application lisse
+                            Borosilicates de calcium : ajoutent un effet lumineux aux ombres pailletées​
+
+                        </div><br>
+                        
+                        <label id="prix2">400</label><br>
+                        <button class="btnAcheter" onclick="acheter('cmd');selectionnerBouton(2)">Acheter</button>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="images/MissDior.jpg" alt="Produit 3">
+                    <div class="product-text">
+                        <h4>Miss Dior</h4>
+                         <button onclick="afficheDesc3()" class="btnDesc">Description</button>
+                            <div id="Description3">Miss Dior parfum incarne une vision moderne et raffinée de la féminité, conçue par Francis Kurkdjian. Cette fragrance revisite l'esprit original de 1947 avec une composition florale riche en nuances. Elle s'ouvre sur des notes pétillantes de mandarine, puis révèle un cœur dominé par le jasmin étoilé, rehaussé de facettes fruitées rappelant la fraise sauvage. Des notes de fond boisées, avec du patchouli et du cèdre, ajoutent une profondeur ambrée et sensuelle.​</div>
+                        <button onclick="affichIng3()" class="btnIng">Ingrédients</button>
+                        <div id="Ingrédients3"> Mandarine pétillante : apporte une ouverture fraîche et fruitée
+                            Jasmin étoilé : cœur floral intense, enrichi de facettes fruitées rappelant la fraise sauvage, la pêche et l'abricot
+                            Patchouli : donne une profondeur boisée et ambrée​
+                            Cèdre de l'Alaska : contribue à la structure boisée, avec des nuances de mousse
+                        </div><br>
+                        
+                        <label id="prix3">350</label><br>
+                        <button class="btnAcheter" onclick="acheter('cmd');selectionnerBouton(3)">Acheter</button>
+                    
+                    </div>
+                </div>
+            </div>
+
+        <!--FORMULAIRE DE COMMANDE-->
+        <div class="grid-container" id="cmd">
+            <div class="formul">
+                <form>
+                    <h3 class="cmd">La commande</h3>
+                    <label for="fname" class="lbl1">Nom </label>
+                    <input type="text" id="fname" name="fname" required><br>
+
+                    <label for="prenom" class="lbl1">prenom </label>
+                    <input type="text" id="prenom" name="prenom"required><br>
+
+                    <label for="Email" class="lbl1">Email</label>
+                    <input type="email" id="Email" name="Email"required><br>
+
+                    <label for="Adresse" class="lbl1">Adresse</label>
+                    <input type="text" id="Adresse" name="Adresse" required><br>
+
+                    <label for="téléphone" class="lbl1">N° téléphone </label>
+                    <input type="tel" id="telephone" name="téléphone" required max="10"><br>
+                  
+                    <label for="Quantité" class="lbl1">Quantité </label>
+                    <input type="number" id="qt1" name="Quantité" min="1" value="1"><br>
+
+                    <button class="commander" onclick= "commander()">commander </button><br>
+                   
+                </form>
+            </div>
+        <div class="aff">
+            <table id="tab">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Email</th>
+                        <th>Adresse</th>
+                        <th>Numéro de téléphone</th>
+                        <th>Quantité commandée</th>
+                        <th>Total de la commande</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les lignes de commande seront ajoutées ici -->
+                </tbody>
+            </table>
+        </div>
+        </div>
+        <div class="cntt">    
+        <div class="contact" id="cntact">
+            <h3 class="contc"> Nous contacter</h3>
+            <label class="lb">NOM</label><br>
+            <input type="text" class="nom" required><br>
+            
+            <label class="lb">EMAIL</label><br>
+            <input type="email" class="email" required><br>
+            
+            <label class="lb">SUJET</label><br>
+            <textarea type="textarea"rows="5" cols="62" class="sujet" required></textarea><br>
+
+            <label class="lb">MESSAGE</label><br>
+            <textarea class="msg"rows="5" cols="62" required></textarea><br>
+            <button class="btnEnv" id="env" onclick="envoyer()">ENVOYER </button><br>
+                   
+        </div>
+    </div>
+            <!-- Pied de page -->
+        <footer class="foot">
+            
+            <a><img class="logo" src="images/LOGO.png" alt="LOGOO"></a>
+            <p style="margin-top: 100px; color: purple;" class="cop">&copy; 2024 Shine Beauty. Tous droits réservés.</p>
+        <p style="margin-top: 100px; color: purple;" class="adrs">Adresse de societe</p>
+               
+            <ul style="margin-top: 100px;">
+                <li id="inst"><a href="https://web.facebook.com/profile.php?id=100010994383962" id="fb"><img src="images/facebook.png" class="inst" style="width: 100%;height: 30px;"></a></li>
+                <li id="inst"><a href="https://www.instagram.com/aziza_cherraqi/" ><img src="images/instagram.png" style="width: 100%;height: 30px;"></a></li>
+            </ul>
+        </footer>
+            
+            
+        </body>
+    </html>
