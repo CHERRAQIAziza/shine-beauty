@@ -87,14 +87,6 @@ function verifierInputV(){
 
 
 
-
-
-
-
-
-
-
-
 function commander(){
 
 // Vérification si un bouton a été sélectionné
@@ -131,26 +123,29 @@ if(nom.trim()===""||prenom.trim()===""||email.trim()===""||adresse.trim()===""||
   // Calcul des totaux en fonction du bouton sélectionné
   let total, qte;
   
+  let prix11 = parseFloat(document.getElementById("prix1").textContent);
+  let prix2 = parseFloat(document.getElementById("prix2").textContent);
+  let prix3 = parseFloat(document.getElementById("prix3").textContent);
   if (boutonSelectionne === 1) {
-    let prix11 = parseFloat(document.getElementById("prix1").textContent);
     qte = parseInt(document.getElementById("qt1").value);
     total = prix11 * qte;
-    
+    parseFloat(document.getElementById("tc").value)=total;
+    alert(`vous avez commander avec succées le prix${prix11}et le total est ${total}`);
   } else if (boutonSelectionne === 2) {
-    let prix2 = parseFloat(document.getElementById("prix2").textContent);
     qte = parseInt(document.getElementById("qt1").value);
     total = prix2 * qte;
+    alert(`vous avez commander avec succées le prix${prix2} et le total est ${total}`);
 
   } else if (boutonSelectionne === 3) {
-    let prix3 = parseFloat(document.getElementById("prix3").textContent);
     qte = parseInt(document.getElementById("qt1").value);
     total = prix3 * qte;
+    alert(`vous avez commander avec succées le prix${prix3}et le total est ${total}`);
   }
 
   // Insérer la quantité et le total dans les cellules
   newRow.insertCell(5).textContent = qte;
   newRow.insertCell(6).textContent = total.toFixed(2) + " DH";
-
+  
   // Réinitialiser le formulaire après la commande
  document.querySelector("form").reset();
   boutonSelectionne = null;
@@ -177,8 +172,8 @@ document.getElementById('env').addEventListener('click', function(event) {
     }
 });
 }document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('nav ul');
+    let menuToggle = document.querySelector('.menu-toggle');
+    let menu = document.querySelector('nav ul');
   
     menuToggle.addEventListener('click', function() {
       menu.classList.toggle('active'); // Toggles the visibility of the menu

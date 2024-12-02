@@ -3,86 +3,95 @@ body{
     padding: 0;
     display: flex;
     flex-direction: column; /* Organise le contenu en colonne */
-    min-height: 100vh;
+   /* min-height: 100vh;*/
     background-color: rgb(250, 202, 234);
 }
-
+/*Menu de site Web*/
+/*.navg nav {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}*/
 nav ul{
     text-align: right;
     list-style: none;
-    margin: 0px;
+    margin: 0;
     background-color: rgb(250, 202, 234);
-   
-    /*margin-left: -80px;*/
     text-align: center;
-    padding: 50px; 
+    padding: 82px; 
+    display: block;
+    flex-direction: row; /*  Par défaut, les éléments s'affichent horizontalement */
+    text-align: right;
 
 }
 nav ul li {
     display:inline;
     font-size: 20px;   
-
+   
+    float: right;
 }
 nav ul li a{
     text-decoration: none;
     padding: 20px;
-    color: purple;    
+    color: purple;  
 
 }nav ul li a:hover{
     color: rgb(208, 53, 247);
 }
+.menu-icon {
+    display: none;
+    width: 40px;
+    cursor: pointer;
+    margin-left: 700px;
+    margin-top:20px;
+}
+
+ nav ul.active {
+    display: block;  /*Affiche le menu sous forme de liste pour mobile */
+}
+
+/*Logo de site web*/
 nav img{
     margin: 0;
     padding: 0;
     width: 250px;
-    height: 150px;
-    float: left;
-    width: 250px;
- }
- 
- /* Pied de page */
-footer {
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 8px ;   
-    background-color: rgb(250, 202, 234);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin-left: -15px;
-}
-footer img{
-    padding: 0;
-    width: 200px;
     height: 200px;
     float: left;
     width: 250px;
-}
-footer ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-/*footer ul li {
-    margin: 0 15px;    
-
-}*/
+ }
+ /*l'image en centre*/
 .beauty{
     width: 100%;
     height: auto;
-    margin-top: -30px;   
-
+    
+   /* margin-top: -30px;*/  
 }
+/*le texte*/
+.motv{
+    position: absolute;
+    bottom: 50%;
+    left: 20px;
+    font-size: 40px;
+    right: 50%;
+}
+/*boutton de découvrer nos prosuits*/
+.btnNosProd{
+    margin-top: 10px;
+    padding: 20px 40px 20px 40px;
+    background-color: purple;
+    color: blanchedalmond;
+    border: none;
+    border-radius: 10px;
+}.btnNosProd:hover{
+    background-color: antiquewhite;
+    color: purple;
+}
+/*les produits*/
 .content .products {
-   /* display: flex;                 /* Alignement horizontal des produits */
-   /* flex-wrap: wrap;               /* Retour à la ligne si nécessaire */
-   
    display: grid;  
    grid-template-columns: repeat(3,1fr);
    justify-content: center;       /* Centre les produits */
-    margin-top: -70px;
-    gap: 20px;
+   margin-top: 10px;
+   /* gap: 20px;*/
 }
 
 .product-item {
@@ -96,12 +105,11 @@ footer ul {
     padding-bottom: 80px;          /* Espacement bas pour le texte */
     
 }
-
 .product-item img {
     width: 100%;                   /* Remplit le conteneur */
     height: 500px;                 /* Hauteur de l'image */
     display: block;                /* Supprime l'espace blanc sous l'image */
-    border-radius: 30px 30px 0 0;  /* Coins arrondis en haut uniquement */
+    border-radius: 30px 30px 30px 30px;  /* Coins arrondis en haut uniquement */
     margin-bottom: 140px;
 }
 
@@ -117,6 +125,7 @@ footer ul {
     box-sizing: border-box;        /* Inclut le padding dans la largeur */
     font-style: oblique;
 }
+/*Les boutton des produits*/
 #Description , #Ingrédients,#Ingrédients2,#Description2,#Description3,#Ingrédients1,#Ingrédients3{
     display: none;
 }
@@ -131,6 +140,8 @@ footer ul {
 .btnDesc:hover , .btnIng:hover ,.btnAcheter:hover,.commander:hover,.btnEnv:hover{
     background-color: rgb(255, 199, 252);
 }
+/*Formulaire de commande */
+
 .contact .btnEnv{
     color: purple;
     padding:20px 170px 20px 170px;
@@ -153,6 +164,7 @@ footer ul {
    background: transparent;
    padding: 20px;
    margin-left: 60px;
+   outline: none;
 }
 .contact .nom,.contact .email,.contact .msg,.contact .sujet{
    border-left: none;
@@ -162,7 +174,7 @@ footer ul {
    margin-left: 60px;
    border-color: purple;
 }.contact .nom,.contact .email{
-    padding:20px 150px 20px 150px;
+    padding:20px 140px 20px 140px;
 }
 .contact .contc,.contact .lb{
     font-style: oblique;
@@ -185,11 +197,9 @@ footer ul {
     margin-right: 240px;
 
 }
-
 .grid-container{
         display: grid;  
         grid-template-columns: repeat(2,1fr);
-        gap: 20px;
 }
 div .contact{
     text-align: center;
@@ -217,38 +227,25 @@ div .contact{
     background-image: url(images/EVE_Flo.png);
     background-repeat: no-repeat;
     background-size: 100%;
+      
+    
+        overflow-x: auto; /* Active le défilement horizontal */
+        -webkit-overflow-scrolling: touch; /* Défilement fluide sur les appareils mobiles */
+    
 }
 .container{
-    
-        position: relative;
-        text-align: center;
-        color: purple;
-      
-}
-.motv{
-    position: absolute;
-    bottom: 50%;
-    left: 20px;
-    font-size: 40px;
-    right: 50%;
-}.btnNosProd{
-    margin-top: 10px;
-    padding: 20px 40px 20px 40px;
-    background-color: purple;
-    color: blanchedalmond;
-    border: none;
-    border-radius: 10px;
-}.btnNosProd:hover{
-    background-color: antiquewhite;
+    position: relative;
+    text-align: center;
     color: purple;
 }
+
 
 #tab {
     width: 100%;                 /* Largeur du tableau */
     border-collapse: collapse;   /* Fusionne les bordures adjacentes */
     margin-top: 100px;
-    overflow-x:auto;
-    display: none;
+    display: none; 
+    overflow-x: auto;
   }
   
   #tab th, #tab td {
@@ -256,58 +253,49 @@ div .contact{
     padding: 8px;                /* Espacement interne */
     text-align: center;   
     color: purple;       /* Centre le texte */
-    
+    font-size: 20px; 
   }
   .foot{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 20px;
+    
     background-color: rgb(250, 202, 234);
 
   }
 
-
-  .menu-icon {
-    display: none;
-    width: 40px;
-    cursor: pointer;
-    margin-left: 700px;
-    margin-top:15px;
+  
+ /* Pied de page */
+ footer {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 8px ;   
+    background-color: rgb(250, 202, 234);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: -15px;
 }
-
-nav ul {
+footer img{
+    padding: 0;
+    width: 200px;
+    height: 200px;
+    float: left;
+    width: 250px;
+}
+footer ul {
+    list-style: none;
     display: flex;
-    flex-direction: row;  /* Par défaut, les éléments s'affichent horizontalement */
-    
+    justify-content: center;
+    margin-top: 10px;
 }
-
-nav ul.active {
-    display: block;  /* Affiche le menu sous forme de liste pour mobile */
-}
-
-
-
-
 
 @media (max-width: 768px) {
-    .menu-icon {
-    display: block;  /* Affiche l'icône */
-}
-
-nav ul {
-    display: none;  /* Masque le menu par défaut */
-    flex-direction: column;  /* Les éléments s'affichent en colonne */
-    text-align: center;
-    background-color: rgb(250, 202, 234);
-    padding: 20px;
-}
-
-nav ul.active {
-    display: flex;  /* Affiche le menu lorsque l'icône est cliquée */
-}
+   
     body {
         padding: 0;
-    } nav img{
+        margin: 0;  overflow-x: hidden;
+
+    }
+    nav img{
         margin-top: -30px;
     }
     nav{
@@ -322,34 +310,45 @@ nav ul.active {
 
     nav ul li {
         display: inline;  
-        font-size: 18px;
+        font-size: 25px;
         margin-top: 50px;
     }
-
-    .content .products {
-        grid-template-columns: repeat(2, 1fr);  /* */
+    .motv {
+        font-size: 30px;  /* Adjust text size for smaller screens */
+       /* margin-top: 150px;*/
+        text-align: center;
+         bottom: 30%;
+        left: 20px;
+        font-size: 30px;
+       
     }
-
-    
-    .product-item{
-        padding-bottom: 250px;          /* Espacement bas pour le texte */
-
-    }
-    .product-item img {
-        width: 100%;
-        height: auto;  /* Keeps the images responsive */
-    }
-
-    .contact input, .contact .nom, .contact .email {
-        padding: 10px 20px;  /* Reduced padding */
-        width: 90%;
-    }
-
     .btnNosProd {
         padding: 20px 50px 20px 50px; /*  */
         font-size: 20px;
     }
-
+    
+    .content .products {
+        grid-template-columns: repeat(2, 1fr);  /* */
+        
+    }
+    .product-item{
+        padding-bottom: 250px;          /* Espacement bas pour le texte */
+        
+    }
+    .product-item img {
+        width: 100%;
+        height: 600px;  /* Keeps the images responsive */
+        border-radius: 30px 30px 30px 30px;  /* Coins arrondis en haut uniquement */
+        margin-bottom: 140px;
+        margin-left: 40px;
+    }
+    .product-item img .prd2{
+        height: 400px;
+    }
+    .contact input, .contact .nom, .contact .email {
+        padding: 10px 20px;  /* Reduced padding */
+        width: 90%;
+    }
     .grid-container {
         grid-template-columns: 1fr;  /* Single column grid */
     }
@@ -357,39 +356,54 @@ nav ul.active {
     .formul {
         text-align: center;
         padding: 20px;
+        margin-left: 70px;
     }
-
-    .motv {
-        font-size: 20px;  /* Adjust text size for smaller screens */
-        margin-top: 80px;
+    .formul input{
+        display: block;
+        margin-left: 250px;
+        font-size: 20px;
     }
-
-    .menu-icon {
-        display: block;  /* Display the menu icon on tablets */
+    .formul .lbl1{
+        float: left;
+        display: inline;
+        margin-left: 50px;
+        margin-top: 20px;
     }
 
     .footer {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(2,1fr);
     }.btnDesc , .btnIng ,.btnAcheter, .commander, .btnEnv{
         padding: 20px 60px 20px 60px;
         margin-bottom: 10px;
        font-size: 30px;
     }#prix1, #prix2, #prix3,h4{
         font-size: 30px;
+    }#tab{
+        max-height: 200px;
+        overflow-x: auto;
+        overflow-y: scroll;
     }
     #cntact{
         text-align: center;
-        font-size: 20px;
+        font-size: 30px;
      }
      .contact .nom,.contact .email,.contact .msg,.contact .sujet{
        margin-left: 120px;
        margin-right: 120px;
      }.contact .nom,.contact .email{
-        padding:30px 20px 30px 20px;margin-right: 120px;
+        padding:20px 10px 20px 50px;width: 52%;
+    }#Description , #Ingrédients,#Ingrédients2,#Description2,#Description3,#Ingrédients1,#Ingrédients3{
+        font-size: 40px;
     }
+   
+
+    
+
+    
 }
 
 @media (max-width: 480px) {
+    
     .menu-icon {
         display: block;  /* Display the menu icon on tablets */
     }
@@ -406,10 +420,21 @@ nav ul.active {
     }
     nav ul li a {
         margin-left: -800px;
+        margin-top: 20px;
     }
-    .formul{
-        text-align: center;
-
+   .formul {
+        padding: 20px;
+        margin-left: 80px;
+        align-items: center;
+        
+    }
+    .formul input{
+        display: block;
+        width: 50%;
+        font-size: 40px;
+    }
+    .formul .lbl1{
+        display: block; 
     }
     nav img {
         width: 150px;  /* Réduit la taille du logo */
@@ -422,13 +447,23 @@ nav ul.active {
 
     .content .products {
         grid-template-columns: 1fr;  /* Une seule colonne */
+        margin-top: -100px;
+       
     }
 
     .product-item {
         width: 100%;  /* Utilise toute la largeur */
         padding-bottom: 60px;
+        margin-left: -15px;
+        
     }
-
+    .product-item img {
+        width: 100%;
+        height: 900px;  /* Keeps the images responsive */
+        border-radius: 30px 30px 0 0;  /* Coins arrondis en haut uniquement */
+        margin-bottom: 140px;
+        
+    }
     footer img {
         width: 100px;  /* Réduit la taille de l'image de pied de page */
         height: auto;
@@ -443,29 +478,40 @@ nav ul.active {
         padding: 10px;
         margin: 10px 0;  /* Réduit l'espacement vertical */
     }
-
+    .contact .nom,.contact .email{
+        padding:20px 10px 20px 50px;width: 20%;
+    }
+    .contact textarea{
+        padding:20px 10px 20px 50px;width: 60%;
+    }
+    .contc{
+        font-size: 70px;
+    }.contact .btnEnv{
+        padding-left: 200px;padding-right: 200px;
+        font-size: 40px;
+    }
     .motv {
-        font-size: 40px;  /* Ajuste la taille du texte */
-        bottom: 20%;
+        font-size: 50px;  /* Ajuste la taille du texte */
+        bottom: 17%;
     }
     .btnNosProd{
         padding: 20px 100px 20px 100px;
-        font-size: 20px;
+        font-size: 25px;
     }
     .btnDesc , .btnIng ,.btnAcheter, .commander, .btnEnv{
         padding: 20px 200px 20px 200px;
         margin-bottom: 10px;
-       font-size: 30px;
+       font-size: 40px;
     }
     h4{
-        font-size: 40px;
+        font-size: 60px;
     }
 
     .product-item{
-        padding-bottom: 270px;          /* Espacement bas pour le texte */
+        padding-bottom: 370px;          /* Espacement bas pour le texte */
 
     }#prix1, #prix2, #prix3{
-        font-size: 40px;
+        font-size: 50px;
     }.formul{
         font-size: 50px;
     }
@@ -484,7 +530,13 @@ nav ul.active {
         width: 50%;
      }.foot .adrs,.foot .cop{
         font-size:70px ;
-     }
+     }#fb img,#inst img {
+        width: 500px;
+        height: 80px;
+      }.inst, .foot img {
+        width: 25px; /* Ajustement pour téléphones */
+        height: 25px;
+      }
      #cntact{
         text-align: center;
         font-size: 60px;
@@ -495,11 +547,17 @@ nav ul.active {
      }.contact .nom,.contact .email{
          padding:30px 200px 30px 250px;
      }
-     #tab{
+     .aff{
         overflow-x: scroll;
         font-size: 50px;
 
-     }
+     } #tab {
+        font-size: 40px;     /* Réduit la taille du texte */
+      }
+     
+     #Description , #Ingrédients,#Ingrédients2,#Description2,#Description3,#Ingrédients1,#Ingrédients3{
+        font-size: 50px;
+    }
 }
 
 
