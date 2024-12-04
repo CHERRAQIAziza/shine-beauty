@@ -3,14 +3,9 @@ body{
     padding: 0;
     display: flex;
     flex-direction: column; /* Organise le contenu en colonne */
-   /* min-height: 100vh;*/
     background-color: rgb(250, 202, 234);
 }
-/*Menu de site Web*/
-/*.navg nav {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-}*/
+
 nav ul{
     text-align: right;
     list-style: none;
@@ -62,8 +57,6 @@ nav img{
 .beauty{
     width: 100%;
     height: auto;
-    
-   /* margin-top: -30px;*/  
 }
 /*le texte*/
 .motv{
@@ -102,17 +95,25 @@ nav img{
     border-radius: 30px;
     overflow: hidden;              /* Empêche le texte de dépasser */
     text-align: center;            /* Centre le texte */
-    padding-bottom: 80px;          /* Espacement bas pour le texte */
+    padding-bottom: 150px;          /* Espacement bas pour le texte */
     
+}.produit{
+    color: purple;
+    font-style: oblique;
+    font-size: 20px;
 }
 .product-item img {
     width: 100%;                   /* Remplit le conteneur */
     height: 500px;                 /* Hauteur de l'image */
     display: block;                /* Supprime l'espace blanc sous l'image */
     border-radius: 30px 30px 30px 30px;  /* Coins arrondis en haut uniquement */
-    margin-bottom: 140px;
+    margin-bottom: 145px;
 }
-
+.content .Nos{
+    color: purple;
+    font-style: oblique;
+    font-size: 25px;
+}
 .product-text {
     position: absolute;            /* Positionnement par rapport au conteneur */
     bottom: 0;                     /* Texte aligné en bas */
@@ -141,31 +142,49 @@ nav img{
     background-color: rgb(255, 199, 252);
 }
 /*Formulaire de commande */
+.formul {
+  text-align: center;
+  font-size: 25px;
+  background-image: url('images/background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  width: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-.contact .btnEnv{
-    color: purple;
-    padding:20px 170px 20px 170px;
-    
+.formul form {
+  display: flex;
+  flex-direction: column;
 }
-.formul{
-    text-align: right;
-    font-size: 25px;
-    background-image: url(images/background.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 50px;
-    padding-top: 20px;
-    background-size:100%;
+
+.formule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
-.formul input{
-   border-left: none;
-   border-top:none;
-   border-right: none;
-   background: transparent;
-   padding: 20px;
-   margin-left: 60px;
-   outline: none;
+
+.formule label {
+  font-weight: bold;
+  width: 30%; /* Largeur constante pour les labels */
+  text-align: left;
 }
+
+.formule input {
+  border: none;
+  border-bottom: 2px solid #000; /* Ligne inférieure stylisée */
+  background: transparent;
+  padding: 8px;
+  width: 65%; /* Utilise l'espace restant */
+  outline: none;
+  box-sizing: border-box;
+}
+
+
 .contact .nom,.contact .email,.contact .msg,.contact .sujet{
    border-left: none;
    border-top:none;
@@ -179,7 +198,7 @@ nav img{
 .contact .contc,.contact .lb{
     font-style: oblique;
     color: purple;
-}div .cntt{
+}.cntt .contact{
     background-image: url(images/NAV.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -196,11 +215,11 @@ nav img{
 #tot{
     margin-right: 240px;
 
-}
+}/*
 .grid-container{
         display: grid;  
         grid-template-columns: repeat(2,1fr);
-}
+}*/
 div .contact{
     text-align: center;
     
@@ -224,14 +243,12 @@ div .contact{
     font-size: 40px;
 }
 .aff{
-    background-image: url(images/EVE_Flo.png);
+    background-image: url(images/footer2.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-      
-    
-        overflow-x: auto; /* Active le défilement horizontal */
-        -webkit-overflow-scrolling: touch; /* Défilement fluide sur les appareils mobiles */
-    
+     overflow-x: auto; /* Active le défilement horizontal */
+    -webkit-overflow-scrolling: touch; /* Défilement fluide sur les appareils mobiles */
+   
 }
 .container{
     position: relative;
@@ -326,7 +343,11 @@ footer ul {
         padding: 20px 50px 20px 50px; /*  */
         font-size: 20px;
     }
-    
+    .produit{
+        color: purple;
+        font-style: oblique;
+        font-size: 40px;
+    }
     .content .products {
         grid-template-columns: repeat(2, 1fr);  /* */
         
@@ -369,7 +390,10 @@ footer ul {
         margin-left: 50px;
         margin-top: 20px;
     }
-
+    .content .Nos{
+       
+        font-size: 40px;
+    }
     .footer {
         grid-template-columns: repeat(2,1fr);
     }.btnDesc , .btnIng ,.btnAcheter, .commander, .btnEnv{
@@ -447,7 +471,7 @@ footer ul {
 
     .content .products {
         grid-template-columns: 1fr;  /* Une seule colonne */
-        margin-top: -100px;
+        margin-top: 10px;
        
     }
 
@@ -492,7 +516,7 @@ footer ul {
     }
     .motv {
         font-size: 50px;  /* Ajuste la taille du texte */
-        bottom: 17%;
+        bottom: 14%;
     }
     .btnNosProd{
         padding: 20px 100px 20px 100px;
@@ -512,10 +536,20 @@ footer ul {
 
     }#prix1, #prix2, #prix3{
         font-size: 50px;
-    }.formul{
-        font-size: 50px;
     }
-
+    .formul {
+        text-align: center;
+        font-size: 40px;
+        padding: 40px;
+        width: 800px;
+      }
+      
+      .formule label {
+        font-weight: bold;
+        width: 100%; /* Largeur constante pour les labels */
+        text-align: left;
+      }
+      
     .formul input{
         padding: 50px;
         margin-left: 200px;

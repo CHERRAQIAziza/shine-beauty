@@ -128,17 +128,17 @@ if(nom.trim()===""||prenom.trim()===""||email.trim()===""||adresse.trim()===""||
   let prix3 = parseFloat(document.getElementById("prix3").textContent);
   if (boutonSelectionne === 1) {
     qte = parseInt(document.getElementById("qt1").value);
-    total = prix11 * qte;
+    total = prix11 * qte;  
     parseFloat(document.getElementById("tc").value)=total;
     alert(`vous avez commander avec succées le prix${prix11}et le total est ${total}`);
   } else if (boutonSelectionne === 2) {
     qte = parseInt(document.getElementById("qt1").value);
-    total = prix2 * qte;
+    total = prix2 * qte;  
     alert(`vous avez commander avec succées le prix${prix2} et le total est ${total}`);
 
   } else if (boutonSelectionne === 3) {
     qte = parseInt(document.getElementById("qt1").value);
-    total = prix3 * qte;
+    total = prix3 * qte; 
     alert(`vous avez commander avec succées le prix${prix3}et le total est ${total}`);
   }
 

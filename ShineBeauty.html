@@ -14,7 +14,6 @@
             <ul id="menu" style=" margin-top: -50px;">
                 <li><a href="#cntact">Contact </a></li>
                 <li> <a href="#prd">Produits </a></li>
-                
                 <li> <a href="#">Accueil </a></li>
                 
                 
@@ -26,18 +25,17 @@
                 parce que vous méritez ce qu'il y a de meilleur !<br>
                 <button class="btnNosProd" onclick="location.href='#prd'">Découvrez nos produits </button>
             </div>
-                
             <img class="beauty" src="images/Beauty.png" alt="LOGOO" >
-            
         </div>
    
         <div class="content">
-            <h4 style="text-align: center;">NOS PRODUITS</h4>
+            <h4 style="text-align: center;" class="Nos">NOS PRODUITS</h4>
             <div class="products" id="prd">
                 <div class="product-item">
-                    <img src="images/DIOR.jpg" alt="Produit 2">
+                    <h4 class="produit">Rouge Dior</h4>
+                     <img src="images/DIOR.jpg" alt="Produit 2">
                     <div class="product-text">
-                        <h4>Rouge Dior</h4>
+                       
                          <button onclick="afficheDesc()" class="btnDesc">Description</button>
                             <div id="Description">Ce rouge à lèvres brillant et hydratant est formulé à 90 % d'ingrédients d'origine naturelle. Sa texture fondante offre une couleur intense, un effet vinyle et 24 heures d'hydratation grâce à des ingrédients comme la cire florale de jasmin et des huiles végétales. Le produit est aussi rechargeable, s'inscrivant dans une démarche écologique</div>
                         <button onclick="affichIng()" class="btnIng">Ingrédients</button>
@@ -52,12 +50,13 @@
                 </div>
 
                 <div class="product-item">
+                    <h4 class="produit">Palette patrick ta</h4>
                     <img src="images/Palette.jpg" alt="Produit 2" class="prd2">
                     <div class="product-text">
-                        <h4>Palette patrick ta</h4>
-                         <button onclick="afficheDesc()" class="btnDesc">Description</button>
+                        
+                         <button onclick="afficheDesc2()" class="btnDesc">Description</button>
                             <div id="Description2">Les palettes de fards à paupières Patrick Ta, comme la Major Dimension et la Major Dimension II Rose, sont réputées pour leur qualité professionnelle et leur variété de textures. Elles offrent des combinaisons de teintes neutres et rosées, avec une sélection de finitions mates, satinées et métalliques. Ces palettes contiennent aussi des bases crémeuses qui permettent d'intensifier les couleurs et de prolonger la tenue des ombres à paupières</div>
-                        <button onclick="affichIng()" class="btnIng">Ingrédients</button>
+                        <button onclick="affichIng2()" class="btnIng">Ingrédients</button>
                         <div id="Ingrédients2"> Mica et Synthetic Fluorphlogopite : donnent de la brillance et une texture soyeuse
                             Beurre de karité (Butyrospermum Parkii Butter) : hydrate et adoucit les paupières
                             Tricrésylate de glycérol (Glyceryl Triacetyl Ricinoleate) et triglycérides capryliques/capriques : assurent une bonne tenue et application lisse
@@ -71,9 +70,9 @@
                 </div>
 
                 <div class="product-item">
+                    <h4 class="produit">Miss Dior</h4>
                     <img src="images/MissDior.jpg" alt="Produit 3">
                     <div class="product-text">
-                        <h4>Miss Dior</h4>
                          <button onclick="afficheDesc3()" class="btnDesc">Description</button>
                             <div id="Description3">Miss Dior parfum incarne une vision moderne et raffinée de la féminité, conçue par Francis Kurkdjian. Cette fragrance revisite l'esprit original de 1947 avec une composition florale riche en nuances. Elle s'ouvre sur des notes pétillantes de mandarine, puis révèle un cœur dominé par le jasmin étoilé, rehaussé de facettes fruitées rappelant la fraise sauvage. Des notes de fond boisées, avec du patchouli et du cèdre, ajoutent une profondeur ambrée et sensuelle.​</div>
                         <button onclick="affichIng3()" class="btnIng">Ingrédients</button>
@@ -95,28 +94,30 @@
             <div class="formul">
                 <form>
                     <h3 class="cmd">La commande</h3>
+                    <div class="formule">
                     <label for="fname" class="lbl1">Nom </label>
                     <input type="text" id="fname" name="fname" required><br>
-
+                    </div><div class="formule">
                     <label for="prenom" class="lbl1">prenom </label>
                     <input type="text" id="prenom" name="prenom"required><br>
-
+                    </div><div class="formule">
                     <label for="Email" class="lbl1">Email</label>
                     <input type="email" id="Email" name="Email"required><br>
-
+                    </div><div class="formule">
                     <label for="Adresse" class="lbl1">Adresse</label>
                     <input type="text" id="Adresse" name="Adresse" required><br>
-
+                    </div><div class="formule">
                     <label for="téléphone" class="lbl1">N° Tel </label>
-                    <input type="number" id="telephone" name="téléphone" required max="10"><br>
-                  
+                    <input type="tel" id="telephone" name="téléphone" required max="10"><br>
+                    </div><div class="formule">
                     <label for="Quantité" class="lbl1">Quantité </label>
                     <input type="number" id="qt1" name="Quantité" min="1" value="1"><br>
+                    </div>
                     <button class="commander" onclick= "commander()">commander </button><br>
                    
                 </form>
             </div>
-        <div class="aff">
+        <div class="aff" style="margin-bottom: 0px;">
             <table id="tab">
                 <thead>
                     <tr>
